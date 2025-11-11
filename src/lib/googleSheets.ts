@@ -1,6 +1,6 @@
 // Google Sheets API integration
 const SHEET_ID = '15WgSu4RsVQp3qvEhIXn086qj4mXnHLgxjkA0yACRFSg';
-const API_KEY = 'AIzaSyDST8VZ8Z8Z8Z8Z8Z8Z8Z8Z8Z8Z8Z8'; // Will be replaced with actual key
+const API_KEY = 'AIzaSyAkJID3wJnKfxDfO2fmd00kUylLiPqts_U';
 
 export interface SummaryData {
   date: string;

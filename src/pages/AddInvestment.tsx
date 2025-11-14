@@ -63,7 +63,7 @@ const AddInvestment = () => {
         const response = await fetch(
           `https://steamcommunity.com/market/search/render/?query=${encodeURIComponent(
             searchQuery
-          )}&count=20&appid=730`
+          )}&count=20&appid=730&norender=1`
         );
         const data: SteamSearchResponse = await response.json();
         

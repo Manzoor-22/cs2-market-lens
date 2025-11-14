@@ -1,5 +1,6 @@
-import { Moon, Sun, RefreshCw } from "lucide-react";
+import { Moon, Sun, RefreshCw, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 interface NavbarProps {
@@ -9,6 +10,7 @@ interface NavbarProps {
 }
 
 export const Navbar = ({ onRefresh, isRefreshing, lastUpdated }: NavbarProps) => {
+  const navigate = useNavigate();
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
 
   useEffect(() => {
@@ -40,6 +42,14 @@ export const Navbar = ({ onRefresh, isRefreshing, lastUpdated }: NavbarProps) =>
             <div className="text-sm text-muted-foreground hidden sm:block">
               Last Updated: <span className="text-foreground font-medium">{lastUpdated}</span>
             </div>
+            
+            <Button
+              onClick={() => navigate("/add-investment")}
+              className="gap-2"
+            >
+              <Plus className="h-4 w-4" />
+              <span className="hidden sm:inline">Add Investment</span>
+            </Button>
             
             <Button
               variant="outline"
